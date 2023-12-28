@@ -5,12 +5,12 @@ pipeline {
     stages {
         stage ('app build'){
             steps {
-                sh "gradlew build"
+                sh "./gradlew build"
             }
         }
         stage ('app run'){
             steps {
-                sh "gradlew bootRun"
+                sh "./gradlew bootRun"
             }
         }
     }
