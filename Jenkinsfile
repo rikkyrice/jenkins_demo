@@ -1,16 +1,11 @@
 pipeline {
     agent {
-        label 'agent01'
+        label 'agent_for_java'
     }
     stages {
         stage ('app build'){
             steps {
                 sh "./gradlew build"
-            }
-        }
-        stage ('app run'){
-            steps {
-                sh "./gradlew bootRun"
             }
         }
     }
